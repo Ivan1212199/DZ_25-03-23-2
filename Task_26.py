@@ -6,3 +6,12 @@
 A = 3; B = 5 -> 243 (3⁵)
     A = 2; B = 3 -> 8 
 """
+
+def IntDeg (A, B):
+    if (B == 1):
+        return (A)
+    if (B != 1):
+        return (A * IntDeg(A, B - 1))
+A = int(input("Введите число: "))
+B = int(input("Введите его степень: "))
+print( 'A =',A, 'B =',B, "->", IntDeg(A, B))
